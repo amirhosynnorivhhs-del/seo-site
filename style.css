@@ -1,79 +1,161 @@
+/* =====================================
+   Linkdoni Kermanshah
+   Version 1.0
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+
+:root{
+
+--bg:#08080c;
+--bg2:#101018;
+--purple:#8b5cf6;
+--purple2:#a855f7;
+--white:#ffffff;
+--text:#d4d4d8;
+--border:#26263b;
+--shadow:0 10px 30px rgba(139,92,246,.25);
+
+}
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:tahoma,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#0b0b0f;
-color:#fff;
+
+font-family:'Vazirmatn',sans-serif;
+
+background:var(--bg);
+
+color:var(--white);
+
+line-height:1.8;
+
+overflow-x:hidden;
+
 }
 
-header{
-padding:50px 20px;
-text-align:center;
-background:linear-gradient(135deg,#7b2cff,#2a003d);
-box-shadow:0 0 30px #7b2cff55;
+a{
+
+text-decoration:none;
+
+color:inherit;
+
 }
 
-header h1{
-font-size:40px;
-margin-bottom:10px;
-}
+img{
 
-header p{
-color:#ddd;
-font-size:18px;
+max-width:100%;
+
+display:block;
+
 }
 
 .container{
-max-width:1100px;
-margin:40px auto;
-padding:20px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
+
+width:95%;
+
+max-width:1250px;
+
+margin:auto;
+
 }
 
-.card{
-background:#17171d;
-border:1px solid #7b2cff55;
-border-radius:20px;
-padding:25px;
+/* ===========================
+Header
+=========================== */
+
+header{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+background:#09090ef2;
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+color:var(--purple2);
+
+letter-spacing:.5px;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:25px;
+
+}
+
+.menu a{
+
+color:var(--text);
+
+font-size:15px;
+
 transition:.3s;
-box-shadow:0 0 20px rgba(123,44,255,.15);
+
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px #7b2cff;
+.menu a:hover{
+
+color:var(--purple2);
+
 }
 
-.card h2{
-margin-bottom:20px;
-color:#c58cff;
-}
+.btn{
 
-.card a{
-display:inline-block;
-padding:12px 24px;
-background:#7b2cff;
-color:#fff;
-text-decoration:none;
+padding:12px 22px;
+
+background:linear-gradient(135deg,var(--purple),var(--purple2));
+
 border-radius:12px;
-transition:.3s;
+
+color:white;
+
+font-weight:700;
+
+transition:.35s;
+
+box-shadow:var(--shadow);
+
 }
 
-.card a:hover{
-background:#9b4dff;
-}
+.btn:hover{
 
-footer{
-margin-top:40px;
-padding:25px;
-text-align:center;
-background:#111;
-color:#bbb;
-border-top:1px solid #7b2cff55;
+transform:translateY(-3px);
+
 }
